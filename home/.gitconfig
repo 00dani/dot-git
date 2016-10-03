@@ -1,0 +1,11 @@
+[include]
+	path = .gitconfig.local
+
+[alias]
+	d = diff
+	l = log --graph --oneline --decorate --all
+	st = status --short
+	shove = "!f() { git push ${1:-origin} :; }; f"
+
+[commit]
+	gpgsign = true
