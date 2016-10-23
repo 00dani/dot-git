@@ -1,15 +1,16 @@
 [include]
 	path = config.local
 
+[user]
+	name = Danielle McLean
+	email = gopsychonauts@gmail.com
+
 [alias]
 	co = checkout
 	d = diff
 	l = log --graph --oneline --decorate --all
 	st = status --short
 	shove = "!f() { git push ${1:-origin} :; }; f"
-
-[commit]
-	gpgsign = true
 
 [url "git@github.com:"]
 	pushInsteadOf = https://github.com/
