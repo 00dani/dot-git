@@ -1,4 +1,7 @@
+# vim: ft=gitconfig
 [include]
+	path = tools/kdiff3
+	path = config.os
 	path = config.local
 
 [user]
