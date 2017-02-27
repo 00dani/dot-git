@@ -20,5 +20,9 @@
 
 [git-up.rebase]
 	arguments = --preserve-merges
+
+[gpg]
+	program = gpg2-no-tty
+
 [rerere]
 	enabled = true
