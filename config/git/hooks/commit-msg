@@ -6,11 +6,8 @@ echo Calculating git guilt... >&2
 # create a temporary commit for git-guilt to look at, using git-stash!
 git stash save -q
 
-# stash@{0}^2 is the index. I know, it's weird. We call git-guilt twice because
-# we want the nice colours when we commit in a terminal, but we don't want them
-# in the actual commit message.
-git guilt HEAD stash@{0}^2 >&2
-git guilt HEAD stash@{0}^2 >> $1
+# stash@{0}^2 is the index. I know, it's weird.
+git guilt HEAD stash@{0}^2 | tee -a $1 >&2
 
 # Now restore the changes from stash, so we can actually commit them. ;)
 git stash pop -q --index
