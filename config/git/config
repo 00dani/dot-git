@@ -22,7 +22,7 @@
 	arguments = --preserve-merges
 
 [gpg]
-	program = gpg2-no-tty
+	program = gpg2-for-git-signing
 
 [rerere]
 	enabled = true

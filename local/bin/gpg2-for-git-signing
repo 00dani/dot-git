@@ -1,0 +1,13 @@
+#!/bin/zsh
+# There's a weird inconsistency between the --default-key and --local-user
+# arguments: when you have multiple signing subkeys, --local-user chooses the
+# newest, and --default-key chooses the one that's available. The latter is
+# clearly preferable. So we shuffle the arguments around a little.
+for arg; do
+	if [[ $arg = -bsau ]]; then
+		args+=(-bsa --default-key)
+	else
+		args+=($arg)
+	fi
+done
+exec gpg2 --no-tty "${(@)args}"
