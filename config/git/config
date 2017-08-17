@@ -26,3 +26,6 @@
 
 [rerere]
 	enabled = true
+
+[dude]
+	icon = ~/.config/git-dude/icon.png
