@@ -1,0 +1,5 @@
+# vim: set ft=sshconfig :
+Host bitbucket.org
+	# Bitbucket bans SSH multiplexing :/
+	ControlPath none
+	User git
