@@ -4,10 +4,6 @@
 	path = config.os
 	path = config.local
 
-[user]
-	name = Danielle McLean
-	email = dani@00dani.me
-
 [alias]
 	co = checkout
 	d = diff
@@ -15,14 +11,8 @@
 	st = status --short
 	shove = "!f() { git push ${1:-origin} :; }; f"
 
-[log]
-	decorate = true
-
-[pretty]
-	graph = tformat:%C(auto)%h %G? %s% gD% D
-
-[url "git@github.com:"]
-	pushInsteadOf = https://github.com/
+[dude]
+	icon = ~/.config/git-dude/icon.png
 
 [git-up.rebase]
 	arguments = --preserve-merges
@@ -30,8 +20,18 @@
 [gpg]
 	program = gpg-for-git-signing
 
+[log]
+	decorate = true
+
+[pretty]
+	graph = tformat:%C(auto)%h %G? %s% gD% D
+
 [rerere]
 	enabled = true
 
-[dude]
-	icon = ~/.config/git-dude/icon.png
+[url "git@github.com:"]
+	pushInsteadOf = https://github.com/
+
+[user]
+	name = Danielle McLean
+	email = dani@00dani.me
