@@ -11,9 +11,15 @@
 [alias]
 	co = checkout
 	d = diff
-	l = log --graph --oneline --decorate --all
+	l = log --graph --pretty=graph --date=relative
 	st = status --short
 	shove = "!f() { git push ${1:-origin} :; }; f"
+
+[log]
+	decorate = true
+
+[pretty]
+	graph = tformat:%C(auto)%h %G? %s% gD% D
 
 [url "git@github.com:"]
 	pushInsteadOf = https://github.com/
