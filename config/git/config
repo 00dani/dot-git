@@ -27,6 +27,7 @@
 	graph = tformat:%C(auto)%h %G? %s% gD% D
 
 [push]
+	default = simple
 	gpgSign = if-asked
 
 [rerere]
