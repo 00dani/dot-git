@@ -26,6 +26,9 @@
 [pretty]
 	graph = tformat:%C(auto)%h %G? %s% gD% D
 
+[push]
+	gpgSign = if-asked
+
 [rerere]
 	enabled = true
 
