@@ -8,6 +8,7 @@
 	co = checkout
 	d = diff
 	l = log --graph --pretty=graph --date=relative
+	up = pull --rebase --autostash
 	st = status --short
 	shove = "!f() { git push ${1:-origin} :; }; f"
 
