@@ -3,14 +3,18 @@ branch=$1
 branchParts=( ${(s:/:)branch} )
 kind=$branchParts[1]
 name=$branchParts[2]
-echo "Finishing $kind '$name'..." >&2
+
+pullreq=$2
+[[ -n pullreq ]] && pullreq=" (pull request #$pullreq)"
+
+echo "Finishing $kind '$name'$pullreq..." >&2
 
 git checkout $branch || exit $?
 
 merge-into() {
 	echo "Merging $branch into $1..." >&2
 	git checkout $1 || exit $?
-	git merge --no-ff $branch --message "Merge $kind '$name' into $1" || exit $?
+	git merge --no-ff $branch --message "Merge $kind '$name'$pullreq into $1" || exit $?
 }
 
 [[ $kind = hotfix ]] && merge-into master
