@@ -8,7 +8,7 @@
 	co = checkout
 	d = diff
 	l = log --graph --pretty=graph --date=relative
-	up = pull --rebase --autostash
+	up = pull --rebase=preserve --autostash
 	st = status --short
 	shove = "!f() { git push ${1:-origin} :; }; f"
 
@@ -20,9 +20,6 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-
-[git-up.rebase]
-	arguments = --preserve-merges
 
 [gpg]
 	program = gpg-for-git-signing
