@@ -9,11 +9,29 @@
 	d = diff
 	l = log --graph --pretty=graph --date=relative
 	up = pull --rebase=preserve --autostash
+	patch = !git --no-pager diff --no-color
 	st = status --short
 	shove = "!f() { git push ${1:-origin} :; }; f"
 
+[color "diff"]
+	meta = yellow
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+
 [column]
 	ui = auto
+
+[core]
+	pager = "diff-so-fancy | less --tabs=4 -RFX"
 
 [diff]
 	colorMoved = true
