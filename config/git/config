@@ -12,6 +12,12 @@
 	st = status --short
 	shove = "!f() { git push ${1:-origin} :; }; f"
 
+[column]
+	ui = auto
+
+[diff]
+	colorMoved = true
+
 [dude]
 	icon = ~/.config/git-dude/icon.png
 
@@ -27,6 +33,9 @@
 [log]
 	decorate = true
 
+[merge]
+	conflictStyle = diff3
+
 [pretty]
 	graph = tformat:%C(auto)%h %G? %s% gD% D
 
@@ -36,6 +45,9 @@
 
 [rerere]
 	enabled = true
+
+[status]
+	branch = true
 
 [url "git@github.com:"]
 	pushInsteadOf = https://github.com/
