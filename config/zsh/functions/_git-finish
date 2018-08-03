@@ -1,0 +1,3 @@
+#compdef git-finish
+#description smoothly finish a git-flow feature or hotfix branch
+_arguments '1:branch:__git_branch_names' '2:pull request number:'
