@@ -18,7 +18,7 @@ merge-into() {
 	git merge --no-ff $branch --message "Merge $kind '$name'$pullreq into $1" || exit $?
 }
 
-[[ $kind = hotfix ]] && merge-into master
+[[ $kind = feature ]] || merge-into master
 merge-into develop
 
 echo "Merge successful, deleting $branch..." >&2
