@@ -8,7 +8,7 @@
 	co = checkout
 	d = diff
 	l = log --graph --pretty=graph --date=relative
-	up = pull --rebase=preserve --autostash --recurse-submodules
+	up = pull --rebase=preserve --autostash
 	patch = !git --no-pager diff --no-color
 	st = status --short
 	shove = "!f() { git push ${1:-origin} :; }; f"
@@ -66,6 +66,9 @@
 
 [status]
 	branch = true
+
+[submodule]
+	recurse = true
 
 [url "git@github.com:"]
 	pushInsteadOf = https://github.com/
