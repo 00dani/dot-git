@@ -8,7 +8,7 @@
 	co = checkout
 	d = diff
 	l = log --graph --pretty=graph --date=relative
-	up = pull --prune --rebase=preserve --autostash
+	up = pull --prune --rebase=merges --autostash
 	patch = !git --no-pager diff --no-color
 	st = status --short
 	shove = "!f() { git push ${1:-origin} :; }; f"
