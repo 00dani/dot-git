@@ -57,6 +57,9 @@
 [pretty]
 	graph = tformat:%C(auto)%h %G? %s% gD% D
 
+[pull]
+	rebase = false
+
 [push]
 	default = simple
 	gpgSign = if-asked
