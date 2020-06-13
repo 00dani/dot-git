@@ -51,6 +51,9 @@
 [gpg]
 	program = gpg-for-git-signing
 
+[init]
+	templateDir = ~/.config/git/template
+
 [log]
 	decorate = true
 
