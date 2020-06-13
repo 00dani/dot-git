@@ -31,7 +31,10 @@
 	ui = auto
 
 [core]
-	pager = "diff-so-fancy | less --tabs=4 -RFX"
+	pager = delta --theme='Monokai Extended'
+
+[interactive]
+	diffFilter = delta --color-only
 
 [diff]
 	colorMoved = true
