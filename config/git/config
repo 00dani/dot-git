@@ -82,6 +82,9 @@
 [url "git@github.com:"]
 	pushInsteadOf = https://github.com/
 
+[url "git@git.00dani.me:"]
+	pushInsteadOf = https://git.00dani.me/
+
 [user]
 	name = Danielle McLean
 	email = dani@00dani.me
