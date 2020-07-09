@@ -55,6 +55,9 @@
 [gpg]
 	program = gpg-for-git-signing
 
+[help]
+	autocorrect = 20
+
 [init]
 	templateDir = ~/.config/git/template
 
