@@ -43,6 +43,10 @@
 [diff]
 	colorMoved = true
 
+[diff "gpg"]
+	binary = true
+	textconv = "gpg -qd --no-tty"
+
 [dude]
 	icon = ~/.config/git-dude/icon.png
 
