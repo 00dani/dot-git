@@ -63,7 +63,7 @@
 	autocorrect = 20
 
 [init]
-	templateDir = ~/.config/git/template
+	defaultBranch = main
 
 [log]
 	decorate = true
