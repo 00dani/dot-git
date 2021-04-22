@@ -1,4 +1,8 @@
 # vim: ft=gitconfig
+[user]
+	name = Danielle McLean
+	email = dani@00dani.me
+
 [include]
 	path = tools/kdiff3
 	path = config.os
@@ -95,7 +99,3 @@
 
 [url "git@git.00dani.me:"]
 	pushInsteadOf = https://git.00dani.me/
-
-[user]
-	name = Danielle McLean
-	email = dani@00dani.me
