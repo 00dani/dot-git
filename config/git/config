@@ -2,6 +2,10 @@
 [user]
 	name = Danielle McLean
 	email = dani@00dani.me
+	signingkey = 83F3DCEC98D522B6A38AF5D927D076D2ACA7BABE
+
+[commit]
+	gpgsign = true
 
 [include]
 	path = tools/kdiff3
