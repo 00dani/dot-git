@@ -7,11 +7,6 @@
 [commit]
 	gpgsign = true
 
-[include]
-	path = tools/kdiff3
-	path = config.os
-	path = config.local
-
 [alias]
 	co = checkout
 	d = diff
@@ -103,3 +98,8 @@
 
 [url "git@git.00dani.me:"]
 	pushInsteadOf = https://git.00dani.me/
+
+[include]
+	path = tools/kdiff3
+	path = config.os
+	path = config.local
