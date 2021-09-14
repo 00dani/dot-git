@@ -101,5 +101,6 @@
 
 [include]
 	path = tools/kdiff3
+	path = tools/kitty-diff
 	path = config.os
 	path = config.local
