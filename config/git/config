@@ -41,7 +41,7 @@
 
 [delta]
 	line-numbers = true
-	syntax-theme = 'Monokai Extended'
+	syntax-theme = Monokai Extended
 
 [diff]
 	colorMoved = true
