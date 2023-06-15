@@ -46,6 +46,9 @@
 [diff]
 	colorMoved = true
 
+[diff "dyff"]
+	command = "dyff_between() { dyff --color on between --omit-header \"$2\" \"$5\"; }; dyff_between"
+
 [diff "gpg"]
 	binary = true
 	textconv = "gpg -qd --no-tty"
