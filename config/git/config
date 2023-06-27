@@ -53,6 +53,9 @@
 	binary = true
 	textconv = "gpg -qd --no-tty"
 
+[diff "sops"]
+	textconv = "sops -d"
+
 [dude]
 	icon = ~/.config/git-dude/icon.png
 
