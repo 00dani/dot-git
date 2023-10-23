@@ -1,3 +1,0 @@
-config => .config
-local => .local
-ssh => .ssh
