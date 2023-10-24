@@ -41,6 +41,7 @@
 
 [delta]
 	line-numbers = true
+	tabs = 2
 	syntax-theme = Monokai Extended
 
 [diff]
