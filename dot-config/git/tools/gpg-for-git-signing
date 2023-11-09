@@ -1,0 +1,3 @@
+# vim: ft=gitconfig
+[gpg]
+	program = gpg-for-git-signing

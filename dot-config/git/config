@@ -70,9 +70,6 @@
 	process = git-lfs filter-process
 	required = true
 
-[gpg]
-	program = gpg-for-git-signing
-
 [help]
 	autocorrect = 20
 
@@ -109,6 +106,26 @@
 
 [url "git@git.00dani.me:"]
 	pushInsteadOf = https://git.00dani.me/
+
+# This is a frankly ridiculous hack. Tower (https://www.git-tower.com) supports
+# signing and verifying with GPG, but it requires you to select a GPG binary in
+# its settings, and it overwrites the value of gpg.program in your Git config
+# to be an absolute path when you do this. This is a problem if you reuse your
+# Git config across platforms where GPG might be in different places, which I
+# do. In my opinion it's a bug in how Tower works, but I've tried contacting
+# support about it and they won't change it. So hacks it is.
+[gpg]
+	program = /usr/local/bin/gpg
+
+# The workaround is to specify the absolute GPG path that Tower wants first
+# (above). Tower will see this setting and its GPG functionality will work
+# properly. Then, the gpg.program setting I actually want is stored in an
+# include file, and that include file is loaded conditionally using includeIf.
+# Tower doesn't seem to understand this, but Git does. The condition I've used
+# is always true, so Git itself always loads this file and my gpg.program
+# setting is overridden with the correct one.
+[includeIf "onbranch:**"]
+	path = tools/gpg-for-git-signing
 
 [include]
 	path = tools/kdiff3
