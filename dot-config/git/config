@@ -42,7 +42,7 @@
 [delta]
 	line-numbers = true
 	tabs = 2
-	syntax-theme = Monokai Extended
+	features = catppuccin-mocha
 
 [diff]
 	colorMoved = true
@@ -128,6 +128,7 @@
 	path = tools/gpg-for-git-signing
 
 [include]
+	path = tools/catppuccin.gitconfig
 	path = tools/kdiff3
 	path = tools/kitty-diff
 	path = config.os
